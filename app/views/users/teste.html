@@ -1,0 +1,38 @@
+<div>
+	<table>
+		<tr>
+			<th>Aniversário:</th>
+			<th>E-mail:</th>
+			<th>Facebook:</th>
+			<th>Github:</th>
+			<th>Trello:</th>
+			<th>Telegram:</th>
+			<th>WhatsApp:</th>
+			<% if @user.telefone != nil %> 
+				<th>Telefone: </th>
+			<% end %>
+		</tr>
+		<tr>
+			<th>Aniversário:</th>
+			<th><%= @user.email %></th> <!--páginas poderiam ser hyperlinks -->
+			<th><%= @user.fb %></th>
+			<th><%= @user.github %></th>
+			<th><%= @user.trello %></th>
+			<th><%= @user.telegram %></th>
+			<th><%= @user.whatsapp %></th>
+			<% if @user.telefone != nil %> 
+				<th><%= @user.telefone %></th>
+			<% end %>
+		</tr>
+	</table>
+	<ul>
+		<li>Aniversário: DATA</li>
+		<li>E-mail: <%=@user.email%></li>
+		<li>Facebook: <%= @user.fb %></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+
+	</ul>
+</div>
