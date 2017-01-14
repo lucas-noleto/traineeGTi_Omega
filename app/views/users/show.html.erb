@@ -108,7 +108,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     </div>
                 </div>              
                  <!-- /. ROW  -->
-                  <hr />
+                  <hr/>
+                  <!--
                 <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">           
 			<div class="panel panel-back noti-box">
@@ -156,6 +157,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
 		     </div>
 			</div>
                  <!-- /. ROW  -->
+                 <!-- EU QUE FIZ
                 <hr />                
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">           
@@ -214,6 +216,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                         
         </div>
                  <!-- /. ROW  -->
+                 <!-- COMENT QUE FIZ
                 <div class="row"> 
                     
                       
@@ -252,6 +255,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 
            </div>
                  <!-- /. ROW  -->
+                 <!-- COMENT QUE FIZ
                 <div class="row" >
                     <div class="col-md-3 col-sm-12 col-xs-12">
   <div class="panel panel-primary text-center no-boder bg-color-green">
@@ -338,6 +342,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     </div>
                 </div>
                  <!-- /. ROW  -->
+                 <!-- COMENT FEITO
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                    
@@ -385,9 +390,11 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                                 <li class="left clearfix">
                                     <span class="chat-img pull-left">
                                         <!--<div class="img-circle"> -->
+                                        <!-- COMENT
                                             <%= image_tag("1.png", :alt => "User", :class => "img-circle" ) %>
                                         <!-- </div> -->
                                         <!-- <img src="assets/imgages/1.png" alt="User" class="img-circle" /> -->
+                                        <!-- COMENT FEITO
                                     </span>
                                     <div class="chat-body">                                        
                                             <strong >Jack Sparrow</strong>
@@ -403,6 +410,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                                     <span class="chat-img pull-right">
                                         <%= image_tag("2.png", :alt => "User", :class => "img-circle" ) %>
                                         <!-- <img src="assets/imgages/2.png" alt="User" class="img-circle" /> -->
+                                        <!-- COMENT FEITO
                                     </span>
                                     <div class="chat-body clearfix">
                                         
@@ -419,6 +427,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                                     <span class="chat-img pull-left">
                                         <%= image_tag("3.png", :alt => "User", :class => "img-circle" ) %>
                                          <!-- <img src="assets/imgages/3.png" alt="User" class="img-circle" /> -->
+                                         <!-- COMENT
                                     </span>
                                     <div class="chat-body clearfix">
                                         
@@ -435,6 +444,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                                     <span class="chat-img pull-right">
                                          <%= image_tag("4.png", :alt => "User", :class => "img-circle" ) %>
                                          <!-- <img src="assets/imgages/4.png" alt="User" class="img-circle" /> -->
+                                         <!-- COMENT
                                     </span>
                                     <div class="chat-body clearfix">
                                       
@@ -451,6 +461,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                                     <span class="chat-img pull-left">
                                         <%= image_tag("1.png", :alt => "User", :class => "img-circle" ) %>
                                         <!-- <img src="assets/imgages/1.png" alt="User" class="img-circle" /> -->
+                                        <!-- COMENT
                                     </span>
                                     <div class="chat-body">                                        
                                             <strong >Jack Sparrow</strong>
@@ -466,6 +477,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                                     <span class="chat-img pull-right">
                                     <%= image_tag("2.png", :alt => "User", :class => "img-circle" ) %>
                                        <!-- <img src="assets/imgages/2.png" alt="User" class="img-circle" /> -->
+                                       <!-- COMENT
                                     </span>
                                     <div class="chat-body clearfix">
                                         
@@ -521,8 +533,45 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                       
                     </div>
                 </div>     
-                 <!-- /. ROW  -->           
+                 <!-- /. ROW  -->
+                 <!-- COMENT           
     </div>
+    -->
+    <!-- TESTANDO CODIGO -->
+
+    <!-- coluna -->
+    <div class="coluna">
+    <!-- dados -->
+        <table>
+            <tr>
+                <th>Aniversário:</th>
+                <th><%= @user.aniversario %></th>
+            </tr>
+            <tr>
+                <th>E-mail:</th>
+                <th><%= @user.email %></th> <!--páginas poderiam ser hyperlinks -->
+            </tr>
+            <tr>
+                <th>Facebook:</th>
+                <th><%= @user.fb %></th>
+            </tr>
+            <tr>
+                <th>Github:</th>
+                <th><%= @user.github %></th>
+            </tr>
+            <tr>
+                <th>Trello:</th>
+                <th><%= @user.trello %></th>
+            </tr>
+
+        </table>
+    </div>
+<!-- coluna -->
+    <div class="coluna">
+    </div>
+
+
+    <!-- FIM TESTE -->
              <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->
