@@ -1,7 +1,12 @@
 class MembrosController < ApplicationController
 	
 	def index
-  		@membros = Membro.order :name
+  	@membros = Membro.order :name
+  		respond_to do |format|
+   			format.html
+		    format.xml {render xml: @membros}
+		    format.json {render json: @membros}
+  		end
 	end
 
 	def new
@@ -20,7 +25,7 @@ class MembrosController < ApplicationController
 	end
 
 	def membro_params
- 	 params.require(:membro).permit(:name, :role, :email)
+ 	 params.require(:membro).permit(:name, :email, :course, :role, :JoinTime, :Rg, :CPF)
 	end
 
 	def create

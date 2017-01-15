@@ -8,8 +8,12 @@
 
 <%= form_for @membro do |f| %>
   Nome: <%= f.text_field :name %><br/>
-  Cargo: <%= f.text_field :role %><br/>
   Email: <%= f.text_field :email %><br/>
+  Curso: <%= f.text_field :course %><br/>
+  Cargo: <%= f.text_field :role %><br/>
+  Entrou quando: <%= f.date_field :JoinTime %><br/>
+  Rg: <%= f.text_field :Rg %><br/>
+  CPF: <%= f.text_field :CPF %><br/>
   <%= f.submit %>
 
   

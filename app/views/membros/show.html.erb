@@ -6,14 +6,35 @@
 </p>
 
 <p>
+  <b>Email: </b>
+  <%= @membro.email %>
+</p>
+
+<p>
+  <b>Curso: </b>
+  <%= @membro.course %>
+</p>
+
+<p>
   <b>Cargo: </b>
   <%= @membro.role %>
 </p>
 
 <p>
-  <b>Email: </b>
-  <%= @membro.email %>
+  <b>Entrou quando: </b>
+  <%= @membro.JoinTime %>
 </p>
+
+<p>
+  <b>Rg: </b>
+  <%= @membro.Rg %>
+</p>
+
+<p>
+  <b>CPF: </b>
+  <%= @membro.CPF %>
+</p>
+
 
 <%= link_to 'Voltar', action: 'index' %>
 <%= link_to 'Editar', action: 'edit', id: @membro %>
