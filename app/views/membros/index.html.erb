@@ -1,0 +1,38 @@
+<h1>Gerenciamento dos Membros</h1>
+
+<td>
+      <%= link_to 'Novo', action: 'new'%>
+</td>
+
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Cargo</th>
+    <th>Email</th>
+  </tr>
+
+<% @membros.each do |membro| %>
+  <tr>
+    <td><%= membro.id %></td>
+    <td><%= membro.name %></td>
+    <td><%= membro.role %></td>
+    <td><%= membro.email %></td>
+    
+    <td>
+      <%= link_to 'Mostrar', action: 'show', id: membro %>
+    </td>
+    
+    <td>
+      <%= link_to 'Deletar', {action: 'destroy', id: membro},
+                         {method: "delete"}  %>
+    </td>
+
+    <td>
+      <%= link_to 'Editar', action: 'edit', id: membro %>
+    </td>
+
+  </tr>
+<% end %>
+</table>

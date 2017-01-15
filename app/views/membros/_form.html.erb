@@ -1,0 +1,16 @@
+<% if @membro.errors.any? %>
+<ul>
+<% @membro.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
+
+<%= form_for @membro do |f| %>
+  Nome: <%= f.text_field :name %><br/>
+  Cargo: <%= f.text_field :role %><br/>
+  Email: <%= f.text_field :email %><br/>
+  <%= f.submit %>
+
+  
+<% end %>
