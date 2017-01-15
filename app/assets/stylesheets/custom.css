@@ -376,4 +376,16 @@ line-height: 1.428571429;
    
 }
 
+/*========================================
+    CSS PERSONALIZADO DA GTi
+=========================================*/
+/* user#show */
+.col_esquerda {
+    text-align: left;
+}
 
+.col_direita{
+    text-align: right;
+}
+
+/* fim user#show */

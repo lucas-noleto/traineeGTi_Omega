@@ -544,26 +544,91 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
     <!-- dados -->
         <table>
             <tr>
-                <th>Aniversário:</th>
-                <th><%= @user.aniversario %></th>
+                <th>
+                    <div class="col_esquerda">
+                        Aniversário:
+                    </div>
+                </th>
+                <th>
+                    <div class="col_direita">
+                        <%=@user.aniversario.day %> de 
+                        <% case @user.aniversario.month %>
+                            <% when 1 %>
+                                <%="Janeiro" %>
+                            <% when 2 %>
+                                <%="Fevereiro" %>
+                            <% when 3 %>
+                                <%="Março" %>
+                            <% when 4 %>
+                                <%="Abril" %>
+                            <% when 5 %>
+                                <%="Maio" %>
+                            <% when 6 %>
+                                <%="Junho" %>
+                            <% when 7 %>
+                                <%="Julho" %>
+                            <% when 8 %>
+                                <%="Agosto" %>
+                            <% when 9 %>
+                                <%="Setembro" %>
+                            <% when 10%>
+                                <%="Outubro" %>
+                            <% when 11 %>
+                                <%="Novembro" %>
+                            <% when 12 %>
+                                <%="Dezembro" %>
+                        <%end%>
+                    </div> <!-- fim col esquerda -->
+                </th>
             </tr>
             <tr>
-                <th>E-mail:</th>
-                <th><%= @user.email %></th> <!--páginas poderiam ser hyperlinks -->
+                <th>
+                    <div class="col_esquerda">
+                        E-mail:
+                    </div>
+                </th>
+                <th>
+                    <div class="col_direita">
+                        <%= @user.email %>
+                    </div>
+                </th> <!--páginas poderiam ser hyperlinks -->
             </tr>
             <tr>
-                <th>Facebook:</th>
-                <th><%= @user.fb %></th>
+                <th>
+                    <div class="col_esquerda">
+                        Facebook:
+                    </div>
+                </th>
+                <th>
+                    <div class="col_direita">
+                        <%= @user.fb %>
+                    </div>
+                </th>
             </tr>
             <tr>
-                <th>Github:</th>
-                <th><%= @user.github %></th>
+                <th>
+                    <div class="col_esquerda">
+                        Github:
+                    </div>
+                </th>
+                <th>
+                    <div class="col_direita">
+                        <%= @user.github %>
+                    </div>
+                </th>
             </tr>
             <tr>
-                <th>Trello:</th>
-                <th><%= @user.trello %></th>
+                <th>
+                    <div class="col_esquerda">
+                        Trello:
+                    </div>
+                </th>
+                <th>
+                    <div class="col_direita">
+                        <%= @user.trello %>
+                    </div>
+                </th>
             </tr>
-
         </table>
     </div>
 <!-- coluna -->
