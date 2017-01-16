@@ -1,7 +1,7 @@
 class MembrosController < ApplicationController
 	
 	def index
-  	@membros = Membro.order :name
+  	@membros = Membro.order("name").page(params['page']).per(10)
   		respond_to do |format|
    			format.html
 		    format.xml {render xml: @membros}

@@ -1,6 +1,8 @@
 class AdvertenciasController < ApplicationController
   def index
-     @advertencias = Advertencia.all
+    
+    @advertencias = Advertencia.order("advdata").page(params['page']).per(10)
+
   end
 
   def new
@@ -25,9 +27,10 @@ class AdvertenciasController < ApplicationController
   end
 end
 
-  def advertencia_params
+def advertencia_params
    params.require(:advertencia).permit(:membro_id, :advdata, :reason)
   end
+
 
   
   def create
