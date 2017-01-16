@@ -1,24 +1,22 @@
 <h1>Gerenciamento dos Membros</h1>
 
+<h2>Listamento de membros</h2>
+
 <td>
       <%= link_to 'Novo', action: 'new'%>
 </td>
 
+<%= link_to "Advertências", :controller => :advertencias, :action => :index %>
+
 
 <table>
   <tr>
-    <th>ID</th>
     <th>Nome</th>
-    <th>Cargo</th>
-    <th>Email</th>
   </tr>
 
 <% @membros.each do |membro| %>
   <tr>
-    <td><%= membro.id %></td>
     <td><%= membro.name %></td>
-    <td><%= membro.role %></td>
-    <td><%= membro.email %></td>
     
     <td>
       <%= link_to 'Mostrar', action: 'show', id: membro %>
@@ -36,9 +34,6 @@
   </tr>
 <% end %>
 </table>
-
-<%= link_to "Advertencias", :controller => :advertencias, :action => :index %>
-
 
 <td>
 <%= paginate @membros %>
