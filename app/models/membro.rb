@@ -19,6 +19,6 @@ validates :CPF, length: { is: 11 }
 
 
 
-has_many :advertencia	
+has_many :advertencias	
 	
 end

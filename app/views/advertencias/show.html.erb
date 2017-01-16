@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @advertencia.advdata %>
+</p>
+
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @advertencia.reason %>
+</p>
+
+<p>
+<%= @advertencia.membro.name %>
+</p>
+
+<%= link_to 'Editar', edit_advertencia_path(@advertencia) %> |
+<%= link_to 'Voltar', advertencias_path %>

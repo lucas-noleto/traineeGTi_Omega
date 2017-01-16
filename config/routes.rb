@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :advertencias
   devise_for :views
   devise_for :users
 
