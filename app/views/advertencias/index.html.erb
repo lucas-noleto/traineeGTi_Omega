@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Advertencias</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Descricao</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @advertencias.each do |advertencia| %>
+      <tr>
+        <td><%= advertencia.advdata %></td>
+        <td><%= advertencia.reason %></td>
+  
+    <td>
+      <%= link_to 'Mostrar', action: 'show', id: advertencia %>
+    </td>
+    <td>
+
+
+</td>
+
+    
+    <td>
+      <%= link_to 'Deletar', {action: 'destroy', id: advertencia},
+                         {method: "delete"}  %>
+    </td>
+
+    <td>
+      <%= link_to 'Editar', action: 'edit', id: advertencia%>
+    </td>
+       </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Voltar", :controller => :membros, :action => :index %>
+<td>
+
+<%= paginate @advertencias %>
+</td>
+
+<br>
+
+<td>
+      <%= link_to 'Nova advertencia', action: 'new'%>
+</td>

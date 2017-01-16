@@ -1,0 +1,40 @@
+<h1>Gerenciamento dos Membros</h1>
+
+<h2>Listamento de membros</h2>
+
+<td>
+      <%= link_to 'Novo', action: 'new'%>
+</td>
+
+<%= link_to "Advertências", :controller => :advertencias, :action => :index %>
+
+
+<table>
+  <tr>
+    <th>Nome</th>
+  </tr>
+
+<% @membros.each do |membro| %>
+  <tr>
+    <td><%= membro.name %></td>
+    
+    <td>
+      <%= link_to 'Mostrar', action: 'show', id: membro %>
+    </td>
+    
+    <td>
+      <%= link_to 'Deletar', {action: 'destroy', id: membro},
+                         {method: "delete"}  %>
+    </td>
+
+    <td>
+      <%= link_to 'Editar', action: 'edit', id: membro %>
+    </td>
+
+  </tr>
+<% end %>
+</table>
+
+<td>
+<%= paginate @membros %>
+</td>
