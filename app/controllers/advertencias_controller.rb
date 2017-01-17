@@ -1,4 +1,7 @@
 class AdvertenciasController < ApplicationController
+  before_filter :authenticate_admin!, except: [:index, :show]
+
+
   def index
     
     @advertencias = Advertencia.order("advdata").page(params['page']).per(10)

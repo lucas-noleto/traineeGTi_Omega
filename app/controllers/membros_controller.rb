@@ -1,5 +1,7 @@
 class MembrosController < ApplicationController
-	
+	before_filter :authenticate_admin!, except: [:index, :show]
+
+
 	def index
   	@membros = Membro.order("name").page(params['page']).per(10)
   		respond_to do |format|
