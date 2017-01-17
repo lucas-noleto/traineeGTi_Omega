@@ -382,10 +382,27 @@ line-height: 1.428571429;
 /* user#show */
 .col_esquerda {
     text-align: left;
+    width:100px;
 }
 
 .col_direita{
     text-align: right;
+    width:200px;
+}
+
+.dados{
+    display: inline-block;
+    width:350px;
+    background-color: gray;
+    
+    padding: 25px;
+    /*border-color: black; */
+}
+
+.expELvl {
+    display: inline-block;
+    width: 100%;
+    background-color: blue;
 }
 
 /* fim user#show */

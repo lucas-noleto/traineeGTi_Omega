@@ -37,16 +37,15 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
-                    <%= image_tag("find_user.png", :alt => "Foto do Usuário", :class => "user-image img-responsive" ) %>
+				    <li class="text-center">
+                    <%= image_tag(@user.foto, :alt => "Foto do Usuário", :class => "user-image img-responsive" ) %>
                     <!-- <img src="assets/imgages/find_user.png" class="user-image img-responsive"/> -->
-					</li>
-				
-					
+				    </li>
                     <li>
                         <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Perfil</a>
                     </li>
-                     <li>
+                    <!--
+                    <li>
                         <a  href="ui.html"><i class="fa fa-desktop fa-3x"></i> UI Elements</a>
                     </li>
                     <li>
@@ -90,13 +89,11 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                             </li>
                         </ul>
                       </li>  
-                  <li  >
+                    <li>
                         <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
-                    </li>	
-                </ul>
-               
+                    </li>	-->
+                </ul> 
             </div>
-            
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
@@ -108,8 +105,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     </div>
                 </div>              
                  <!-- /. ROW  -->
-                  <hr/>
-                  <!--
+                <hr/> <!-- DIVISÓRIA -->
+                <!--
                 <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">           
 			<div class="panel panel-back noti-box">
@@ -540,7 +537,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
     <!-- TESTANDO CODIGO -->
 
     <!-- coluna -->
-    <div class="coluna">
+    <div class="dados">
     <!-- dados -->
         <table>
             <tr>
@@ -601,7 +598,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 </th>
                 <th>
                     <div class="col_direita">
-                        <%= @user.fb %>
+                        <%x = 'http://' %>
+                        <%x = x+@user.fb%>
+                        <%= link_to "Link", x, :target => "_blank" %>
                     </div>
                 </th>
             </tr>
@@ -613,7 +612,11 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 </th>
                 <th>
                     <div class="col_direita">
-                        <%= @user.github %>
+                        <% x = "https://github.com/"%>
+                        <% x = x+@user.github %>
+                        <% x = x.delete"@"%>
+                        <%= link_to @user.github, x, :target => "_blank" %>
+                        <%# @user.github %>
                     </div>
                 </th>
             </tr>
@@ -625,14 +628,20 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 </th>
                 <th>
                     <div class="col_direita">
-                        <%= @user.trello %>
+                        <% x = "https://trello.com/"%>
+                        <% x = x+@user.trello %>
+                        <% x = x.delete"@"%>
+                        <% #x = x+@y %>
+                        <%= link_to @user.trello, x, :target => "_blank" %>
+                        <%# @user.trello %>
                     </div>
                 </th>
             </tr>
         </table>
     </div>
 <!-- coluna -->
-    <div class="coluna">
+    <div class="expELvl">
+        Hueeeee
     </div>
 
 
