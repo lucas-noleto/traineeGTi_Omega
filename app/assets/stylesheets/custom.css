@@ -401,8 +401,14 @@ line-height: 1.428571429;
 
 .expELvl {
     display: inline-block;
-    width: 100%;
+    
     background-color: blue;
+}
+
+.dadosEXp {
+    width: 100%;
+    border-color: black;
+    border-width: 5px;
 }
 
 /* fim user#show */
