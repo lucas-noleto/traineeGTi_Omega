@@ -42,7 +42,15 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     <!-- <img src="assets/imgages/find_user.png" class="user-image img-responsive"/> -->
 				    </li>
                     <li>
-                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Perfil</a>
+                        
+                       <!-- <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Perfil</a> -->
+                        
+                        <a class="active-menu">
+                            <i class="fa fa-dashboard fa-3x"></i> 
+                            <%= link_to "Perfil", user_path(@user), :class => "active-menu" %> 
+                        </a>
+
+
                     </li>
                     <!--
                     <li>
@@ -108,7 +116,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 <hr/> <!-- DIVISÓRIA -->
     <!-- coluna -->
     <div class="dadosEXp">
-        <div class="dados">
+        <div class="bloco" id="dados">
         <!-- dados -->
             <table>
                 <tr>
@@ -186,8 +194,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                             <% x = "https://github.com/"%>
                             <% x = x+@user.github %>
                             <% x = x.delete"@"%>
-                            <%= link_to @user.github, x, :target => "_blank" %>
-                           
+                            <%= link_to @user.github, x, :target => "_blank" %>  
                         </div>
                     </th>
                 </tr>
@@ -203,15 +210,68 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                             <% x = x+@user.trello %>
                             <% x = x.delete"@"%>
                             <%= link_to @user.trello, x, :target => "_blank" %>
-
                         </div>
                     </th>
                 </tr>
             </table>
         </div>
     <!-- coluna -->
-        <div class="expELvl">
-            Hueeeee
+        <div class="bloco">
+            <table>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Nível:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <%= @user.nivel %>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Experiência:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <%= @user.exp %>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Próx Nível:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <% @x = 0  %>
+                            <% @prox = 0 %>
+                            <% until @x >= @user.nivel do %>
+                                <% @x = @x+1 %>
+                                <% @prox = @prox+ (@x*1000) %>
+                            <% end %>
+                            <%= @prox %>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+            <div class="expArea">
+                <div class="espacoBarra">
+                        
+                </div>
+                <div class="barraExp">
+                    
+                </div>
+                <div class="espacoBarra">
+                        
+                </div>
+            </div>
         </div>
     </div> <!-- FIM DadosEXp -->
 

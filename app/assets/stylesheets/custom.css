@@ -206,8 +206,9 @@ max-width:170px;
 }
 
 .navbar-cls-top .navbar-brand {
-	color: #fff;
-background: #C90000;
+color: #fff;
+
+background-color: #6650aa;
 width: 260px;
 text-align: center;
 height: 60px;
@@ -215,7 +216,12 @@ font-size: 30px;
 font-weight: 700;
 }
 .active-menu {
-    background-color:#C90000!important;
+    background-color:#63b4bc!important;
+}
+
+.active-menu:hover {
+    background-color: #6582B3 !important;
+    transition-duration: 1s;
 }
 
 .arrow {
@@ -311,9 +317,9 @@ font-weight: 700;
 }
 .navbar-cls-top .navbar-brand:hover {
 
-background: #C90000;
+background: #6582B3;
 color:#fff;
-
+transition-duration: 1s;
 }
 
 .navbar-default {
@@ -381,22 +387,53 @@ line-height: 1.428571429;
 =========================================*/
 /* user#show */
 .col_esquerda {
+    display: inline-block;
     text-align: left;
+    position: left;
     width:100px;
 }
 
 .col_direita{
+    display: inline-block;
+    position: right;
     text-align: right;
-    width:200px;
+    width:160px;
 }
 
-.dados{
+.bloco{
     display: inline-block;
-    width:350px;
+    width:270px;
     background-color: gray;
+    padding: 5px;
+    height: 110px 
+}
+
+#dados{
+    float: left;
+}
+
+.expArea {
+    height: 40px;
+    background-color: blue;
+}
+
+.barraExp {
     
-    padding: 25px;
-    /*border-color: black; */
+    border-width: 5px;
+    border: 5px solid white;
+    height: 20px;
+    border-radius: 10px;
+    
+}
+
+#preenche {
+    border: none;
+    background-color: green;
+}
+
+#vazio {
+   border: none;
+   background-color: gray;
 }
 
 .expELvl {
@@ -408,7 +445,13 @@ line-height: 1.428571429;
 .dadosEXp {
     width: 100%;
     border-color: black;
-    border-width: 5px;
+    /*border-width: 5px; */
+    background-color: black;
+    height: 110px;
+}
+
+.espacoBarra {
+    height: 10px;
 }
 
 /* fim user#show */
