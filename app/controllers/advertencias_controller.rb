@@ -23,11 +23,10 @@ class AdvertenciasController < ApplicationController
 
   def destroy
     @advertencia = Advertencia.find(params[:id])
-      @advertencia.destroy
-        respond_to do |format|
-      format.html { redirect_to advertencia_url, notice: 'Advertencia destruida.' }
-      format.json { head :no_content }
-  end
+    @advertencia.destroy
+    
+    redirect_to(action: "index")
+      
 end
 
 def advertencia_params
