@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :membros
 
-  # root to: "membros#index" "Gambiarra"
+  #root to: 'membros#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
