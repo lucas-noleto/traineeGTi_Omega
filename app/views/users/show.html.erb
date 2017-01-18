@@ -266,7 +266,18 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                         
                 </div>
                 <div class="barraExp">
-                    
+                    <% @pix = 26*@user.exp %>
+                    <% @pix = @pix/(@prox) %>
+                    <% @pix.round %>
+                    <% @cont = 0 %>
+                    <% until @cont >= @pix do %>
+                            <% @cont = @cont+1 %>
+                            <div class="barraExp" id="preenche"></div>
+                    <% end %>
+                    <% until @cont >= 26 do %>
+                            <% @cont = @cont+1 %>
+                            <div class="barraExp" id="vazio"></div>
+                    <% end %>
                 </div>
                 <div class="espacoBarra">
                         
