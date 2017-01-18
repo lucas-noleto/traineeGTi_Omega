@@ -42,6 +42,7 @@ Rails.application.configure do
 
   #configuração do devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  #SENDGRID_API_KEY.
-  #echo "export SENDGRID_API_KEY='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'" > sendgrid.env
+  #configuração da gem letter_opener
+  config.action_mailer.delivery_method = :letter_opener
+
 end

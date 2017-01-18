@@ -15,6 +15,18 @@
   		<p class="alert alert-danger"><%= alert %></p>
 	<% end %>
 	<!-- fim devise -->
+
+	<% if admin_signed_in? %>
+		<ul>
+			<li><%= link_to 'Ajustes na Conta', edit_admin_registration_path %></li>
+			<li><%= link_to 'Sair', destroy_admin_session_path, :method => :delete %></li>
+		</ul>
+	<% else %>
+		<ul>
+			<li><%= link_to 'Entrar', new_admin_session_path %></li>
+		</ul>
+	<% end %>
+
 <%= yield %>
 
 </body>
