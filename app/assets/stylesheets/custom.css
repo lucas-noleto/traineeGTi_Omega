@@ -405,7 +405,8 @@ line-height: 1.428571429;
     width:270px;
     background-color: gray;
     padding: 5px;
-    height: 110px 
+    height: 110px;
+    margin-right: -4px; 
 }
 
 #dados{
@@ -433,7 +434,7 @@ line-height: 1.428571429;
     display: inline-block;
     margin-bottom: 6px;
     margin-left: 0px;
-    margin-right: 0px;
+    margin-right: -4px;
 }
 
 #vazio {
@@ -454,14 +455,38 @@ line-height: 1.428571429;
 
 .dadosEXp {
     width: 100%;
-    border-color: black;
-    /*border-width: 5px; */
     background-color: black;
     height: 110px;
 }
 
 .espacoBarra {
     height: 10px;
+}
+
+.grande {
+    height: 100px;
+    width: 100%;
+}
+
+.azul {
+    height: 100px;
+    width: 33.33%;
+    background-color: blue;
+    display: flex;
+}
+
+.verm {
+    height: 100px;
+    width: 33.33%;
+    background-color: red;
+    display: flex;
+}
+
+.verde {
+    height: 100px;
+    width: 33.33%;
+    background-color: green;
+    display: flex;
 }
 
 /* fim user#show */

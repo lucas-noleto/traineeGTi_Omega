@@ -116,7 +116,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 <hr/> <!-- DIVISÓRIA -->
     <!-- coluna -->
     <div class="dadosEXp">
-        <div class="bloco" id="dados">
+        <div class="bloco" >
         <!-- dados -->
             <table>
                 <tr>
@@ -215,7 +215,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 </tr>
             </table>
         </div>
-    <!-- coluna -->
+        <!-- bloco -->
         <div class="bloco">
             <table>
                 <tr>
@@ -269,7 +269,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     <% @pix = 26*@user.exp %>
                     <% @pix = @pix/(@prox) %>
                     <% @pix.round %>
-                    <% @cont = 0 %>
+                    <% @cont = 1 %>
                     <% until @cont >= @pix do %>
                             <% @cont = @cont+1 %>
                             <div class="barraExp" id="preenche"></div>
@@ -288,16 +288,30 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             <table>
                 <tr>
                     <th>
-                        Advertências:
+                        <div class="col_esquerda">
+                            Advertências:
+                        </div>
                     </th>
                     <th>
-                        <%= @user.advertencias %>
+                        <div class="col_direita">
+                            <%= @user.advertencias %>
+                        </div>
                     </th>
                 </tr>
             </table>
         </div>
     </div> <!-- FIM DadosEXp -->
-
+    <div class="grande">
+        <div class="azul">
+                
+        </div>
+        <div class="verm">
+                
+        </div>
+        <div class="verde">
+                
+        </div>
+    </div>
     <!-- FIM TESTE -->
              <!-- /. PAGE INNER  -->
             </div>
