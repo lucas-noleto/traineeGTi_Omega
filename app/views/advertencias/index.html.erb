@@ -7,6 +7,7 @@
     <tr>
       <th>Data</th>
       <th>Descricao</th>
+      <th>Membro</th>
     </tr>
   </thead>
 
@@ -15,6 +16,7 @@
       <tr>
         <td><%= advertencia.advdata %></td>
         <td><%= advertencia.reason %></td>
+        <td><%= advertencia.membro.name%></td>
   
     <td>
       <%= link_to 'Mostrar', action: 'show', id: advertencia %>
