@@ -115,10 +115,10 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                  <!-- /. ROW  -->
                 <hr/> <!-- DIVISÓRIA -->
     <!-- coluna -->
-    <div class="dadosEXp">
+    <div class="caixaDados">
         <div class="bloco" >
         <!-- dados -->
-            <table>
+            <table class ="tabela">
                 <tr>
                     <th>
                         <div class="col_esquerda">
@@ -217,7 +217,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
         </div>
         <!-- bloco -->
         <div class="bloco">
-            <table>
+            <table class ="tabela">
                 <tr>
                     <th>
                         <div class="col_esquerda">
@@ -238,7 +238,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     </th>
                     <th>
                         <div class="col_direita">
-                            <%= @user.exp %>
+                            <%= @user.pontuacao %>
                         </div>
                     </th>
                 </tr>
@@ -266,7 +266,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                         
                 </div>
                 <div class="barraExp">
-                    <% @pix = 26*@user.exp %>
+                    <% @pix = 26*@user.pontuacao %>
                     <% @pix = @pix/(@prox) %>
                     <% @pix.round %>
                     <% @cont = 1 %>
@@ -285,7 +285,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             </div>
         </div>
         <div class="bloco">
-            <table>
+            <table class="tabela">
                 <tr>
                     <th>
                         <div class="col_esquerda">
@@ -301,17 +301,6 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             </table>
         </div>
     </div> <!-- FIM DadosEXp -->
-    <div class="grande">
-        <div class="azul">
-                
-        </div>
-        <div class="verm">
-                
-        </div>
-        <div class="verde">
-                
-        </div>
-    </div>
     <!-- FIM TESTE -->
              <!-- /. PAGE INNER  -->
             </div>

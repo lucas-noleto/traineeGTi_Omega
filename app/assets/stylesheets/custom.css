@@ -387,26 +387,26 @@ line-height: 1.428571429;
 =========================================*/
 /* user#show */
 .col_esquerda {
-    display: inline-block;
-    text-align: left;
-    position: left;
-    width:100px;
+    min-width:100px;
+    max-width: 50%;
+    text-align: left;; 
 }
 
 .col_direita{
-    display: inline-block;
-    position: right;
+
     text-align: right;
-    width:160px;
+    min-width:160px;
+    max-width: 50%;
 }
 
 .bloco{
-    display: inline-block;
-    width:270px;
+    display: inline-table;
     background-color: gray;
-    padding: 5px;
+    
     height: 110px;
-    margin-right: -4px; 
+    margin-right: -4px;
+    max-width: 386px;
+    margin: 5px; 
 }
 
 #dados{
@@ -419,7 +419,7 @@ line-height: 1.428571429;
 }
 
 .barraExp {
-    border-width: 5px;
+ 
     border: 5px solid white;
     height: 20px;
     border-radius: 10px;
@@ -432,7 +432,7 @@ line-height: 1.428571429;
     height: 10px;
     border-radius: 0px;
     display: inline-block;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-left: 0px;
     margin-right: -4px;
 }
@@ -453,40 +453,30 @@ line-height: 1.428571429;
     
 }
 
-.dadosEXp {
+
+.caixaDados {
     width: 100%;
     background-color: black;
-    height: 110px;
+    min-height: 120px;
 }
 
 .espacoBarra {
     height: 10px;
 }
 
-.grande {
-    height: 100px;
+.tabela {
     width: 100%;
 }
 
-.azul {
-    height: 100px;
-    width: 33.33%;
-    background-color: blue;
-    display: flex;
-}
+/* tela grande */
+@media(min-width:768px) {
+    .caixaDados {
+        height: 110px;
+    }
 
-.verm {
-    height: 100px;
-    width: 33.33%;
-    background-color: red;
-    display: flex;
-}
+    .bloclo {
 
-.verde {
-    height: 100px;
-    width: 33.33%;
-    background-color: green;
-    display: flex;
-}
+    }
 
-/* fim user#show */
+      
+}/* fim user#show */
