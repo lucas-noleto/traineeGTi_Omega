@@ -401,12 +401,11 @@ line-height: 1.428571429;
 
 .bloco{
     display: inline-table;
-    background-color: gray;
-    
+    background-color: inherit;
     height: 110px;
     margin-right: -4px;
     max-width: 386px;
-    margin: 5px; 
+    margin: 5px 5px 5px 5px; 
 }
 
 #dados{
@@ -456,7 +455,7 @@ line-height: 1.428571429;
 
 .caixaDados {
     width: 100%;
-    background-color: black;
+    background-color: gray;
     min-height: 120px;
 }
 
@@ -468,15 +467,24 @@ line-height: 1.428571429;
     width: 100%;
 }
 
+.conquistas {
+    background-color: inherit;
+    margin: auto;
+    background-color: gray;
+    font-weight: bolder;
+}
+
 /* tela grande */
 @media(min-width:768px) {
     .caixaDados {
         height: 110px;
+        width: 882px;
+        margin: auto;
     }
 
-    .bloclo {
+    .conquistas{
+        width: 882px;
 
     }
-
       
 }/* fim user#show */
