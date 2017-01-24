@@ -1,0 +1,36 @@
+<%= form_for(advertencia) do |f| %>
+  <% if advertencia.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(advertencia.errors.count, "error") %> prohibited this advertencia from being saved:</h2>
+
+      <ul>
+      <% advertencia.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+     <p><%= f.label :membro_id %><br />
+    <%= f.collection_select(:membro_id, @membros,
+                                    :id, :name, :prompt => true) %></p>
+</div>
+
+ 
+
+  <div class="field">
+    <%= f.label "Data" %>
+    <%= f.text_field :advdata %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label "Motivo" %>
+    <%= f.text_area :reason %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
