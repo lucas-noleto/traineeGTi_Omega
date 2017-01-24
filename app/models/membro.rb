@@ -18,7 +18,7 @@ validates :Rg, length: { is: 13 }
 validates :CPF, length: { is: 11 }
 
 
+has_many :advertencias
 
-has_many :advertencias	
 	
 end

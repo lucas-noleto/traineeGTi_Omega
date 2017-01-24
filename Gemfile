@@ -31,6 +31,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #gem de autenticação de user
 gem 'devise'
+#gem do SendGrid
+gem 'sendgrid-ruby'
+#gem para mandar emails localmente
+gem "letter_opener", :group => :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

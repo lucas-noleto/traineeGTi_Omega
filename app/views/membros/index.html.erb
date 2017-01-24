@@ -2,9 +2,11 @@
 
 <h2>Listamento de membros</h2>
 
-<td>
+<% if admin_signed_in? %>
+  <td>
       <%= link_to 'Novo', action: 'new'%>
-</td>
+  </td>
+<% end %>
 
 <%= link_to "Advertências", :controller => :advertencias, :action => :index %>
 
@@ -22,6 +24,7 @@
       <%= link_to 'Mostrar', action: 'show', id: membro %>
     </td>
     
+  <% if admin_signed_in? %> 
     <td>
       <%= link_to 'Deletar', {action: 'destroy', id: membro},
                          {method: "delete"}  %>
@@ -30,7 +33,8 @@
     <td>
       <%= link_to 'Editar', action: 'edit', id: membro %>
     </td>
-
+  <% end %>
+  
   </tr>
 <% end %>
 </table>

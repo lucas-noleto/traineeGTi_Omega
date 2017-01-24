@@ -1,0 +1,328 @@
+<!--<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> -->
+<!-- view individual de membro -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Bootstrap Admin Template : Binary Admin</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/stylesheets/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/stylesheets/font-awesome.css" rel="stylesheet" />
+     <!-- MORRIS CHART STYLES-->
+    <link href="assets/javascripts/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/stylesheets/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">GTi Jr.</a> 
+            </div>
+  <div style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				    <li class="text-center">
+                    <%= image_tag(@user.foto, :alt => "Foto do Usuário", :class => "user-image img-responsive" ) %>
+                    <!-- <img src="assets/imgages/find_user.png" class="user-image img-responsive"/> -->
+				    </li>
+                    <li>
+                        
+                       <!-- <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Perfil</a> -->
+                        
+                        <a class="active-menu">
+                            <i class="fa fa-dashboard fa-3x"></i> 
+                            <%= link_to "Perfil", user_path(@user), :class => "active-menu" %> 
+                        </a>
+
+
+                    </li>
+                    <!--
+                    <li>
+                        <a  href="ui.html"><i class="fa fa-desktop fa-3x"></i> UI Elements</a>
+                    </li>
+                    <li>
+                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i> Tabs & Panels</a>
+                    </li>
+						   <li  >
+                        <a   href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
+                    </li>	
+                      <li  >
+                        <a  href="table.html"><i class="fa fa-table fa-3x"></i> Table Examples</a>
+                    </li>
+                    <li  >
+                        <a  href="form.html"><i class="fa fa-edit fa-3x"></i> Forms </a>
+                    </li>				
+					
+					                   
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-3x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+
+                                </ul>
+                               
+                            </li>
+                        </ul>
+                      </li>  
+                    <li>
+                        <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
+                    </li>	-->
+                </ul> 
+            </div>
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2><%= @user.nome %></h2>
+                        <h5><%= @user.cargo %> </h5>  
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                <hr/> <!-- DIVISÓRIA -->
+    <!-- coluna -->
+    <div class="caixaDados">
+        <div class="bloco" >
+        <!-- dados -->
+            <table class ="tabela">
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Aniversário:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <%=@user.aniversario.day %> de 
+                            <% case @user.aniversario.month %>
+                                <% when 1 %>
+                                    <%="Janeiro" %>
+                                <% when 2 %>
+                                    <%="Fevereiro" %>
+                                <% when 3 %>
+                                    <%="Março" %>
+                                <% when 4 %>
+                                    <%="Abril" %>
+                                <% when 5 %>
+                                    <%="Maio" %>
+                                <% when 6 %>
+                                    <%="Junho" %>
+                                <% when 7 %>
+                                    <%="Julho" %>
+                                <% when 8 %>
+                                    <%="Agosto" %>
+                                <% when 9 %>
+                                    <%="Setembro" %>
+                                <% when 10%>
+                                    <%="Outubro" %>
+                                <% when 11 %>
+                                    <%="Novembro" %>
+                                <% when 12 %>
+                                    <%="Dezembro" %>
+                            <%end%>
+                        </div> <!-- fim col esquerda -->
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            E-mail:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <%= @user.email %>
+                        </div>
+                    </th> <!--páginas poderiam ser hyperlinks -->
+                </tr>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Facebook:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <%x = 'http://' %>
+                            <%x = x+@user.fb%>
+                            <%= link_to "Link", x, :target => "_blank" %>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Github:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <% x = "https://github.com/"%>
+                            <% x = x+@user.github %>
+                            <% x = x.delete"@"%>
+                            <%= link_to @user.github, x, :target => "_blank" %>  
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Trello:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <% x = "https://trello.com/"%>
+                            <% x = x+@user.trello %>
+                            <% x = x.delete"@"%>
+                            <%= link_to @user.trello, x, :target => "_blank" %>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <!-- bloco -->
+        <div class="bloco">
+            <table class ="tabela">
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Nível:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <%= @user.nivel %>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Experiência:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <%= @user.pontuacao %>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Próx Nível:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <% @x = 0  %>
+                            <% @prox = 0 %>
+                            <% until @x >= @user.nivel do %>
+                                <% @x = @x+1 %>
+                                <% @prox = @prox+ (@x*1000) %>
+                            <% end %>
+                            <%= @prox %>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+            <div class="expArea">
+                <div class="espacoBarra">
+                        
+                </div>
+                <div class="barraExp">
+                    <% @pix = 26*@user.pontuacao %>
+                    <% @pix = @pix/(@prox) %>
+                    <% @pix.round %>
+                    <% @cont = 1 %>
+                    <% until @cont >= @pix do %>
+                            <% @cont = @cont+1 %>
+                            <div class="barraExp" id="preenche"></div>
+                    <% end %>
+                    <% until @cont >= 26 do %>
+                            <% @cont = @cont+1 %>
+                            <div class="barraExp" id="vazio"></div>
+                    <% end %>
+                </div>
+                <div class="espacoBarra">
+                        
+                </div>
+            </div>
+        </div>
+        <div class="bloco">
+            <table class="tabela">
+                <tr>
+                    <th>
+                        <div class="col_esquerda">
+                            Advertências:
+                        </div>
+                    </th>
+                    <th>
+                        <div class="col_direita">
+                            <%= @user.advertencias %>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div> <!-- FIM DadosEXp -->
+    <div class="conquistas">
+        <h4>Conquistas</h4>
+    </div>
+    <!-- FIM TESTE -->
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/javascripts/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/javascripts/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/javascripts/jquery.metisMenu.js"></script>
+     <!-- MORRIS CHART SCRIPTS -->
+     <script src="assets/javascripts/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/javascripts/morris/morris.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/javascripts/custom.js"></script>
+    
+   
+</body>
+</html>

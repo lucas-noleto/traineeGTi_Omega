@@ -21,11 +21,8 @@
     <td>
       <%= link_to 'Mostrar', action: 'show', id: advertencia %>
     </td>
-    <td>
 
-
-</td>
-
+  <% if admin_signed_in? %>
     
     <td>
       <%= link_to 'Deletar', {action: 'destroy', id: advertencia},
@@ -35,6 +32,8 @@
     <td>
       <%= link_to 'Editar', action: 'edit', id: advertencia%>
     </td>
+
+  <% end %>
        </tr>
     <% end %>
   </tbody>
@@ -46,8 +45,9 @@
 <%= paginate @advertencias %>
 </td>
 
-<br>
 
-<td>
+<% if admin_signed_in? %>
+  <td>
       <%= link_to 'Nova advertencia', action: 'new'%>
-</td>
+  </td>
+<% end %>
